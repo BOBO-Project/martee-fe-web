@@ -1,10 +1,12 @@
 import React from "react";
 
+import Navbar from "components/Navbar";
+
 const HomepageView = () => {
   return (
-    <div>
-      <h1>Homepage 1</h1>
-    </div>
+    <>
+      <Navbar />
+    </>
   );
 };
 
