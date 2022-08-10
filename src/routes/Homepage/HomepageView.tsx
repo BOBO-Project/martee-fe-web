@@ -1,12 +1,14 @@
 import React from "react";
 
-import Navbar from "components/Navbar";
-
 const HomepageView = () => {
   return (
-    <>
-      <Navbar />
-    </>
+    <div>
+      <img
+        src={require("../../assets/images/home-banner.png")} // temporary
+        alt="home-banner"
+        width="100%"
+      />
+    </div>
   );
 };
 

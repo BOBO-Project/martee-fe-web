@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { color } from "styles/colors";
+import { color, ColorName } from "styles/colors";
 
 interface NavbarProps {
   Container?: any;
@@ -17,11 +17,20 @@ S.Container = styled("div")({
   minHeight: "100px",
 });
 
-S.Text = styled("text")({
+interface TextProps {
+  backgroundColor: ColorName;
+}
+
+S.Text = styled("text")<TextProps>(({ backgroundColor }) => ({
   color: color["primary-blue"],
   fontWeight: 400,
-  fontSize: "20px",
+  fontSize: "18px",
   lineHeight: "28px",
-});
+  background: color[backgroundColor],
+  borderRadius: "50px",
+  padding: "10px 15px",
+  minWidth: "50px",
+  textAlign: "center",
+}));
 
 export default S;
