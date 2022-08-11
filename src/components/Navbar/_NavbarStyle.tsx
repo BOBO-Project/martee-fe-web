@@ -4,12 +4,13 @@ import { color, ColorName } from "styles/colors";
 interface NavbarProps {
   Container?: any;
   Text?: any;
+  Image?: any;
 }
 
 const S: NavbarProps = {};
 
 S.Container = styled("div")({
-  padding: "0 20px",
+  padding: "0 40px",
   display: "flex",
   justifyContent: "space-evenly",
   alignItems: "center",
@@ -31,6 +32,15 @@ S.Text = styled("text")<TextProps>(({ backgroundColor }) => ({
   padding: "10px 15px",
   minWidth: "50px",
   textAlign: "center",
+  cursor: "pointer",
 }));
+
+S.Image = styled("img")({
+  background: color["primary-blue"],
+  borderTopLeftRadius: "200px",
+  borderTopRightRadius: "200px",
+  borderBottomRightRadius: "200px",
+  padding: "0 20px",
+});
 
 export default S;

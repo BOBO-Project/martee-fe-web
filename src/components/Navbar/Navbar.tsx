@@ -16,10 +16,10 @@ const Navbar: FC = () => {
     <S.Container>
       {MENU_LIST.map(({ title, path, logo }) =>
         logo ? (
-          <img
+          <S.Image
             key={title}
-            src={require("../../assets/images/martee.png")}
-            width={180}
+            src={require("../../assets/images/logo.png")}
+            width={150}
             alt="martee"
             onClick={() => handleClick(path)}
           />

@@ -10,8 +10,8 @@ interface FooterProps {
 const S: FooterProps = {};
 
 S.Wrapper = styled("div")({
-  position: "absolute",
-  bottom: 0,
+  // position: "absolute",
+  // bottom: 0,
   width: "100vw",
 });
 
