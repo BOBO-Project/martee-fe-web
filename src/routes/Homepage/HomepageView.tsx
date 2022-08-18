@@ -1,13 +1,17 @@
 import type { FC } from "react";
 import AboutUsHome from "./AboustUs";
 import S from "./_HomePageStyles";
+import homeBanner from "assets/images/home-banner.png";
+import banner2 from "assets/images/banner-2.png";
+import banner3 from "assets/images/banner-3.png";
+import backGround from "assets/images/BG.png";
 
 const HomepageView: FC = () => {
   return (
     <>
       <S.Container
         style={{
-          backgroundImage: `url(${require("../../assets/images/home-banner.png")})`,
+          backgroundImage: homeBanner,
         }}
       >
         <S.HeadingWrapper>
@@ -22,17 +26,17 @@ const HomepageView: FC = () => {
       </S.Container>
       <S.Container
         style={{
-          backgroundImage: `url(${require("../../assets/images/banner-2.png")})`,
+          backgroundImage: banner2,
         }}
       />
       <S.Container
         style={{
-          backgroundImage: `url(${require("../../assets/images/banner-3.png")})`,
+          backgroundImage: banner3,
         }}
       />
       <S.Container
         style={{
-          backgroundImage: `url(${require("../../assets/images/BG.png")})`,
+          backgroundImage: backGround,
         }}
       >
         <S.PortoWrapper>
@@ -50,12 +54,7 @@ const HomepageView: FC = () => {
             {[1, 1, 1, 1, 1, 1, 1, 1, 1].map((el, idx) => (
               <S.PortoBox>
                 {idx !== 4 ? (
-                  <img
-                    src={require("../../assets/images/banner-2.png")}
-                    alt="a"
-                    width="100%"
-                    height="100%"
-                  />
+                  <img src={banner2} alt="a" width="100%" height="100%" />
                 ) : (
                   <S.PortoValues>
                     <S.PortoHeading>VALUES EVERY MOMENT</S.PortoHeading>
