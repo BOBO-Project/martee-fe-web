@@ -1,6 +1,11 @@
 import ContextBanner from "components/ContextBanner/ContextBanner";
+import ContextSection from "components/ContextSection";
 import type { FC } from "react";
 import S from "./_ServicePageStyles";
+import ContextText from "components/ContextText";
+import service1 from '../../assets/images/service1.png'
+
+import ServiceBanner from "../../assets/images/service-banner2.png"
 
 const ServicePage: FC = () => {
   return (
@@ -14,7 +19,7 @@ const ServicePage: FC = () => {
         }}>Service</h1> */}
       <ContextBanner
         title="Service"
-        backgroundImg={"../../assets/images/service-banner.png"}
+        backgroundImg={ServiceBanner}
       />
       <S.Container>
         <S.Heading>INI ADALAH SEDIKIT PENJELASAN SERVICES </S.Heading>
@@ -38,20 +43,10 @@ const ServicePage: FC = () => {
           versions of Lorem Ipsum.
         </S.Heading3>
       </S.Container>
-      <div className="board" >
-        <div className="pic-services">
-          <S.Container>
-            <>Service1</>
-            <S.Text>Service 1</S.Text>
-          </S.Container>
-        </div>
-        <div className="content-services">
-          <S.Container>
-            <S.Heading2>Services for the planning of the wedding consists of the following </S.Heading2>
-            <S.Text>WEDDING PLANNER & ORGANIZER JABODETABEK, BANDUNG, BALI</S.Text>
-          </S.Container>
-        </div>
-      </div>
+      <ContextText heading1='WEDDING PLANNER & ORGANIZER JABODETABEK, BANDUNG, BALI' title={"Services for the planning of the wedding consists of the following"} text={"Responsabillities"} position={'right'} info={true} image={service1}/>
+      <ContextText heading1='WEDDING PLANNER & ORGANIZER JABODETABEK, BANDUNG, BALI ' title={"Specialize in Traditional Wedding concepts in Indonesia"} text={"WEDDING PLANNER & ORGANIZER JABODETABEK, BANDUNG, BALI"} position={'left'}/>
+      <ContextText heading1='WEDDING PLANNER & ORGANIZER JABODETABEK, BANDUNG, BALI ' title={"Specialize in International Wedding world-wide"} position={'right'}/>
+      <ContextSection/>
       {/* </S.Container> */}
     </>
   );

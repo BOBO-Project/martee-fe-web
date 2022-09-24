@@ -1,26 +1,14 @@
 import type { FC } from "react";
 import S from "./_AboutPageStyle";
 import ContextSection from "components/ContextSection";
+import ProfilePhoto from "../../assets/images/profile-photo.png"
+import ContextBanner from "components/ContextBanner/ContextBanner";
+import banner from "../../assets/images/aboutus-banner.png"
 
 const AboutPage: FC = () => {
   return (
     <div>
-      <S.ContainerBanner>
-        <img
-          src={require("../../assets/images/aboutus-banner.png")}
-          alt="aboutus-banner"
-          width="100%"
-        />
-        <S.HeadingBanner>
-          <img
-            src={require("../../assets/images/union.png")}
-            alt="union"
-            width="72px"
-            height="72px"
-          />
-          TENTANG KAMI
-        </S.HeadingBanner>
-      </S.ContainerBanner>
+      <ContextBanner title="About Us" backgroundImg={banner}/>
       <S.Container>
         <S.Heading>INI ADALAH SEDIKIT PENJELASAN TENTANG KAMI</S.Heading>
         <S.Text>WEDDING PLANNER & ORGANIZER JABODETABEK, BANDUNG, BALI</S.Text>
@@ -40,7 +28,7 @@ const AboutPage: FC = () => {
       </S.Container>
       <S.ContainerPict>
         <img
-          src={require("../../assets/images/profile-photo.png")}
+          src={ProfilePhoto}
           alt="profile-photo"
           width="300px"
           height="600px"
@@ -78,7 +66,6 @@ const AboutPage: FC = () => {
         ></iframe>
       </S.ContainerVideo>
       <ContextSection />
-      <h1>asd</h1>
     </div>
   );
 };

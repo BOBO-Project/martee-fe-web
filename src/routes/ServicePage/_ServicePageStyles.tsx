@@ -10,6 +10,7 @@ interface ServiceProps {
   ButtonWrapper?: any;
   Heading2?: any;
   Button?: any;
+  Board?: any
 }
 
 const S: ServiceProps = {};
@@ -68,5 +69,16 @@ S.Heading2 = styled("h2")({
   fontSize: "28px",
   lineHeight: "140%",
 });
+
+S.Board = styled('div')<ContainerProps>(({ props }) => ({
+  alignItems: "flex-start",
+  flexDirection: "row",
+  width: "100%",
+  maxWidth: "650px",
+  display: "flex",
+  margin: "auto",
+  justifyContent: "center",
+  marginTop: "64px"
+}));
 
 export default S;

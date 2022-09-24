@@ -5,13 +5,15 @@ import homeBanner from "assets/images/home-banner.png";
 import banner2 from "assets/images/banner-2.png";
 import banner3 from "assets/images/banner-3.png";
 import backGround from "assets/images/BG.png";
+import ContextSection from "components/ContextSection";
+import ContextText from "components/ContextText";
 
 const HomepageView: FC = () => {
   return (
     <>
       <S.Container
         style={{
-          backgroundImage: homeBanner,
+          backgroundImage: `url('${homeBanner}')`,
         }}
       >
         <S.HeadingWrapper>
@@ -24,19 +26,30 @@ const HomepageView: FC = () => {
           </S.ButtonWrapper>
         </S.HeadingWrapper>
       </S.Container>
+      <ContextSection />
       <S.Container
         style={{
-          backgroundImage: banner2,
+          backgroundImage: `url('${banner2}')`,
+        }}
+      />
+      <ContextText title="We take care of everything, the smallest of details.">
+        <p>
+          We are the one of the best wedding planner in Jakarta, Bandung, Bali
+          and Indonesia. Providing local wedding and international wedding for
+          both couple and handsome bride who looking for their dream wedding.
+          Our purpose is to help you with the best service and experience your
+          dream comes true. If you're ready to plan a wedding, reach out. Our
+          designers have a unique perspective that can elevate your vision.
+        </p>
+      </ContextText>
+      <S.Container
+        style={{
+          backgroundImage: `url('${banner3}')`,
         }}
       />
       <S.Container
         style={{
-          backgroundImage: banner3,
-        }}
-      />
-      <S.Container
-        style={{
-          backgroundImage: backGround,
+          backgroundImage: `url('${backGround}')`,
         }}
       >
         <S.PortoWrapper>

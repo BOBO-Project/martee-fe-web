@@ -30,10 +30,10 @@ interface ContainerProps {
 // HOME PAGE
 S.Container = styled("div")<ContainerProps>(({ props }) => ({
   width: "100%",
-  minHeight: "720px",
+  minHeight: "1000px",
   ...props,
   backgroundRepeat: "no-repeat",
-  backgroundSize: "100vw 720px",
+  backgroundSize: "100vw 1000px",
 }));
 
 S.HeadingWrapper = styled("div")({
