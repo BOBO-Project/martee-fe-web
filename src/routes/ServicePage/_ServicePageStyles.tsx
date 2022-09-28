@@ -11,6 +11,7 @@ interface ServiceProps {
   Heading2?: any;
   Button?: any;
   Board?: any
+  Li?:any
 }
 
 const S: ServiceProps = {};
@@ -80,5 +81,12 @@ S.Board = styled('div')<ContainerProps>(({ props }) => ({
   justifyContent: "center",
   marginTop: "64px"
 }));
+
+S.Li = styled("li")({
+  fontFamily: "Work Sans",
+  fontSize:'18px',
+  fontWeight: "600",
+
+})
 
 export default S;

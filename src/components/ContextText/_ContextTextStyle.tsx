@@ -94,5 +94,21 @@ S.Board = styled('div')<ContainerProps>(({ props }) => ({
     fontWeight: "600",
 
   })
+
+  S.ButtonWrapper = styled("div")({
+    display: "flex",
+    justifyContent: "center",
+    marginTop: "51px",
+  });
+  
+  S.Button = styled("button")({
+    background: color["primary-cream2"],
+    color: color.white,
+    padding: "18px 26px",
+    fontWeight: 700,
+    fontSize: "16px",
+    lineHeight: "22.4px",
+    border: "none",
+  });
   export default S;
   

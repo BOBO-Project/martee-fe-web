@@ -12,19 +12,14 @@ const ContextBanner: FC<Props> = (props: Props) => {
   return (
     <>
       <S.ContainerBanner
-      style={{
-        backgroundImage: `url('${img}')`,
-        // width:'100%',
-        // height:'100%'
-      }}>
-        {/* <img
-          src={require(`../../assets/images/aboutus-banner.png`)}
-          alt="aboutus-banner"
-          width="100%"
-        /> */}
-        <img src={union} alt="union" />
-        {/* <img src={img} alt="banner" width="100%" height="100%" /> */}
-        <S.HeadingBanner>{title}</S.HeadingBanner>
+        style={{
+          backgroundImage: `url('${img}')`,
+        }}
+      >
+        <S.HeadingBanner>
+          <img src={union} alt="union" />
+          {title}
+        </S.HeadingBanner>
       </S.ContainerBanner>
     </>
   );
