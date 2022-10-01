@@ -3,15 +3,9 @@ import S from "./_ContextTextStyle";
 
 interface Props {
   title?: string;
-  heading1?: string;
-  text?: string;
-  info?: boolean;
   position?: string;
-  title_text?: string;
   children?: ReactNode;
   image?: string;
-  button?: string;
-  // img:any,
 }
 
 const ContextText: FC<Props> = (props: Props) => {

@@ -45,7 +45,6 @@ const ServicePage: FC = () => {
       <div style={{
       }}>
         <ContextText
-          heading1="WEDDING PLANNER & ORGANIZER JABODETABEK, BANDUNG, BALI"
           title={
             "Services for the planning of the wedding consists of the following"
           }

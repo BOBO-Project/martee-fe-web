@@ -47,7 +47,7 @@ S.HeadingBanner = styled("h1")({
   color: color["primary-white"],
   fontStyle: "normal",
   fontWeight: "700",
-  fontSize: "60px",
+  fontSize: "80px",
   lineHeight: "100%",
   letterSpacing: "-0.015em",
   margin: "auto",

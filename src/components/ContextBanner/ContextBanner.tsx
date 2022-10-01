@@ -17,7 +17,7 @@ const ContextBanner: FC<Props> = (props: Props) => {
         }}
       >
         <S.HeadingBanner>
-          <img src={union} alt="union" />
+          <img src={union} alt="union" style={{marginLeft:'100px'}} />
           {title}
         </S.HeadingBanner>
       </S.ContainerBanner>
