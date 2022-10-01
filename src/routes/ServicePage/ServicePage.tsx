@@ -6,6 +6,7 @@ import ContextText from "components/ContextText";
 import service1 from "../../assets/images/service1.png";
 import service2 from "../../assets/images/service2.png";
 import service3 from "../../assets/images/service3.png";
+import serviceHero from "assets/images/service-hero.png";
 
 import ServiceBanner from "../../assets/images/service-banner2.png";
 
@@ -19,7 +20,7 @@ const ServicePage: FC = () => {
           color:'#FFFFFF',
           padding:'0%'
         }}>Service</h1> */}
-      <ContextBanner title="Service" backgroundImg={ServiceBanner} />
+      <ContextBanner title={serviceHero} backgroundImg={ServiceBanner} />
       <S.Container>
         <S.Heading>INI ADALAH SEDIKIT PENJELASAN SERVICES </S.Heading>
         <S.Text>WEDDING PLANNER & ORGANIZER JABODETABEK, BANDUNG, BALI</S.Text>
@@ -42,8 +43,7 @@ const ServicePage: FC = () => {
           versions of Lorem Ipsum.
         </S.Heading3>
       </S.Container>
-      <div style={{
-      }}>
+      <div style={{}}>
         <ContextText
           heading1="WEDDING PLANNER & ORGANIZER JABODETABEK, BANDUNG, BALI"
           title={

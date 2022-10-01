@@ -10,7 +10,7 @@ interface NavbarProps {
 const S: NavbarProps = {};
 
 S.Container = styled("div")({
-  padding: "0 40px",
+  padding: "20px 40px 20px 40px",
   display: "flex",
   justifyContent: "space-evenly",
   alignItems: "center",
@@ -23,12 +23,15 @@ interface TextProps {
 }
 
 S.Text = styled("text")<TextProps>(({ backgroundColor }) => ({
-  color: color["primary-blue"],
-  fontWeight: 400,
-  fontSize: "18px",
-  lineHeight: "28px",
+  color:
+    backgroundColor === null ? color["primary-blue"] : color["primary-white"],
+  fontWeight: 500,
+  fontSize: "22px",
+  lineHeight: "30px",
   background: color[backgroundColor],
-  borderRadius: "50px",
+  borderTopLeftRadius: "200px",
+  borderTopRightRadius: "200px",
+  borderBottomRightRadius: "200px",
   padding: "10px 15px",
   minWidth: "50px",
   textAlign: "center",
@@ -41,6 +44,7 @@ S.Image = styled("img")({
   borderTopRightRadius: "200px",
   borderBottomRightRadius: "200px",
   padding: "0 20px",
+  cursor: "pointer",
 });
 
 export default S;
