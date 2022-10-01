@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { MENU_LIST } from "menuList";
+import logoMartee from '../../assets/images/logo.png'
 
 import S from "./_NavbarStyle";
 
@@ -14,11 +15,11 @@ const Navbar: FC = () => {
 
   return (
     <S.Container>
-      {MENU_LIST.map(({ title, path, logo }) =>
+      {MENU_LIST.map(({ title, path,logo}) =>
         logo ? (
           <S.Image
             key={title}
-            src={require("../../assets/images/logo.png")}
+            src={logoMartee}
             width={150}
             alt="martee"
             onClick={() => handleClick(path)}

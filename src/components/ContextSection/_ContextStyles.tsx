@@ -17,7 +17,7 @@ S.ContainerText = styled("div")({
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundSize: "cover",
-    marginTop: "34px"
+    marginTop: "-1px"
   })
   
   S.TextWrapper = styled("div")({

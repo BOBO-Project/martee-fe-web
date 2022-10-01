@@ -8,6 +8,7 @@ import {
   CONTACT_US_PATH,
 } from "url/web-url";
 
+
 export const MENU_LIST = [
   {
     title: "About",

@@ -30,10 +30,10 @@ interface ContainerProps {
 // HOME PAGE
 S.Container = styled("div")<ContainerProps>(({ props }) => ({
   width: "100%",
-  minHeight: "720px",
+  minHeight: "1000px",
   ...props,
   backgroundRepeat: "no-repeat",
-  backgroundSize: "100vw 720px",
+  backgroundSize: "100vw 1000px",
 }));
 
 S.HeadingWrapper = styled("div")({
@@ -89,15 +89,15 @@ S.AboutHeading = styled("h1")({
 
 S.TextWrapper = styled("div")({
   display: "flex",
-  justifyContent: "space-between",
+  justifyContent: "center",
 });
 
 S.AboutText = styled("p")({
   padding: "0 25px",
-  width: "50%",
-  fontSize: "14px",
+  maxWidth: "28%",
+  fontSize: "16px",
   fontWeight: 400,
-  lineHeight: "19.6px",
+  lineHeight: "25.6px",
 });
 
 S.AboutButtonWrapper = styled("div")({
