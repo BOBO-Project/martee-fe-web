@@ -1,6 +1,5 @@
 import type { FC } from "react";
 import S from "./_ContextBannerStyles";
-import union from "../../assets/images/union.png";
 interface Props {
   title?: string;
   backgroundImg?: string;
@@ -17,8 +16,7 @@ const ContextBanner: FC<Props> = (props: Props) => {
         }}
       >
         <S.HeadingBanner>
-          <img src={union} alt="union" style={{marginLeft:'100px'}} />
-          {title}
+          <img src={title} alt="hero" width={293} />
         </S.HeadingBanner>
       </S.ContainerBanner>
     </>

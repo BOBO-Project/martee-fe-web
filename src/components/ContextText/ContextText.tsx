@@ -19,15 +19,16 @@ const ContextText: FC<Props> = (props: Props) => {
     <S.Board>
       {pose ? (
         <>
-          <S.Container>
-            <img
-              src={props.image}
-              alt="service-img"
-              style={{
-                width: "80%",
-              }}
-            />
-          </S.Container>
+          <div
+            style={{
+              backgroundImage: `url(${props.image})`,
+              width: "100%",
+              maxWidth: "50vw",
+              minHeight: "615px",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          />
           <S.Container
             style={{
               Height: "5%",
@@ -45,15 +46,16 @@ const ContextText: FC<Props> = (props: Props) => {
             <S.Text>{text}</S.Text>
             {props.children}
           </S.Container>
-          <S.Container>
-            <img
-              src={props.image}
-              alt="service-img"
+            <div
               style={{
-                width: "80%",
+                backgroundImage: `url(${props.image})`,
+                width: "100%",
+                maxWidth: "50vw",
+                minHeight: "615px",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
               }}
             />
-          </S.Container>
         </>
       )}
     </S.Board>

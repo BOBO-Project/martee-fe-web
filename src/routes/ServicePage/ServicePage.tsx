@@ -6,20 +6,15 @@ import ContextText from "components/ContextText";
 import service1 from "../../assets/images/service1.png";
 import service2 from "../../assets/images/service2.png";
 import service3 from "../../assets/images/service3.png";
+import serviceHero from "assets/images/service-hero.png";
 
 import ServiceBanner from "../../assets/images/service-banner2.png";
+import { color } from "styles/colors";
 
 const ServicePage: FC = () => {
   return (
     <>
-      {/* <S.Container> */}
-      {/* <h1 style={{
-          display: 'flex',
-          justifyContent:'center',
-          color:'#FFFFFF',
-          padding:'0%'
-        }}>Service</h1> */}
-      <ContextBanner title="Service" backgroundImg={ServiceBanner} />
+      <ContextBanner title={serviceHero} backgroundImg={ServiceBanner} />
       <S.Container>
         <S.Heading>INI ADALAH SEDIKIT PENJELASAN SERVICES </S.Heading>
         <S.Text>WEDDING PLANNER & ORGANIZER JABODETABEK, BANDUNG, BALI</S.Text>
@@ -42,8 +37,7 @@ const ServicePage: FC = () => {
           versions of Lorem Ipsum.
         </S.Heading3>
       </S.Container>
-      <div style={{
-      }}>
+      <div style={{}}>
         <ContextText
           title={
             "Services for the planning of the wedding consists of the following"
@@ -51,41 +45,61 @@ const ServicePage: FC = () => {
           position={"right"}
           image={service1}
         >
-          <h3>Responsabilities</h3>
+          <h3
+            style={{
+              padding: "0 78px",
+              fontWeight: "bolder",
+              color: "#6C6C6C",
+            }}
+          >
+            Responsabilities
+          </h3>
           <div
             style={{
               display: "flex",
-              justifyContent: "space-between",
+              flexDirection: "row",
+              padding: "0 78px",
+              gap: "24px",
             }}
           >
-            <div>
-              <S.Li>Moodboard wedding concepts</S.Li>
-              <S.Li>Venue</S.Li>
-              <S.Li>Decoration</S.Li>
-              <S.Li>Catering</S.Li>
-              <S.Li>KUA & Penghulu</S.Li>
-              <S.Li>Saksi Nikah</S.Li>
-              <S.Li>Souvenir</S.Li>
-              <S.Li>Kartu Undangan</S.Li>
-              <S.Li>Baju calon pengantin</S.Li>
-              <S.Li>Seragam orang tua calon pengantin</S.Li>
-              <S.Li>Qori & Tilawah</S.Li>
-              <S.Li>Tim/Sanggar adat</S.Li>
-            </div>
             <div
               style={{
-                marginLeft: "5%",
+                display: "flex",
+                justifyContent: "space-between",
+                color: "#6C6C6C",
               }}
             >
-              <S.Li>Make up artist calon pengantin</S.Li>
-              <S.Li>Make up artist ibu & saudara kandung calon pengantin</S.Li>
-              <S.Li>Sound systems</S.Li>
-              <S.Li>MC</S.Li>
-              <S.Li>Music band</S.Li>
-              <S.Li>Tarian adat pembuka</S.Li>
-              <S.Li>Panitia keluarga</S.Li>
-              <S.Li>Penjaga buku tamu</S.Li>
-              <S.Li>Many more...</S.Li>
+              <div>
+                <S.Li>Moodboard wedding concepts</S.Li>
+                <S.Li>Venue</S.Li>
+                <S.Li>Decoration</S.Li>
+                <S.Li>Catering</S.Li>
+                <S.Li>KUA & Penghulu</S.Li>
+                <S.Li>Saksi Nikah</S.Li>
+                <S.Li>Souvenir</S.Li>
+                <S.Li>Kartu Undangan</S.Li>
+                <S.Li>Baju calon pengantin</S.Li>
+                <S.Li>Seragam orang tua calon pengantin</S.Li>
+                <S.Li>Qori & Tilawah</S.Li>
+                <S.Li>Tim/Sanggar adat</S.Li>
+              </div>
+              <div
+                style={{
+                  marginLeft: "5%",
+                }}
+              >
+                <S.Li>Make up artist calon pengantin</S.Li>
+                <S.Li>
+                  Make up artist ibu & saudara kandung calon pengantin
+                </S.Li>
+                <S.Li>Sound systems</S.Li>
+                <S.Li>MC</S.Li>
+                <S.Li>Music band</S.Li>
+                <S.Li>Tarian adat pembuka</S.Li>
+                <S.Li>Panitia keluarga</S.Li>
+                <S.Li>Penjaga buku tamu</S.Li>
+                <S.Li>Many more...</S.Li>
+              </div>
             </div>
           </div>
         </ContextText>
@@ -97,13 +111,17 @@ const ServicePage: FC = () => {
           <div
             style={{
               display: "flex",
+              flexDirection: "row",
+              padding: "0 78px",
+              gap: "24px",
             }}
           >
             <p
               style={{
-                maxWidth: "28%",
-                marginRight: "5%",
-                lineHeight: "25.4px",
+                // fontSize: "14px",
+                lineHeight: "19.6px",
+                fontWeight: 400,
+                maxWidth: "231px",
               }}
             >
               We are a full-service event planning and wedding coordination
@@ -115,9 +133,10 @@ const ServicePage: FC = () => {
             </p>
             <p
               style={{
-                maxWidth: "28%",
-                marginRight: "5%",
-                lineHeight: "25.4px",
+                // fontSize: "14px",
+                lineHeight: "19.6px",
+                fontWeight: 400,
+                maxWidth: "231px",
               }}
             >
               Our sophisticated and glamorous wedding planner & organizer team
@@ -136,13 +155,17 @@ const ServicePage: FC = () => {
           <div
             style={{
               display: "flex",
+              flexDirection: "row",
+              padding: "0 78px",
+              gap: "24px",
             }}
           >
             <p
               style={{
-                maxWidth: "28%",
-                marginRight: "5%",
-                lineHeight: "25.4px",
+                // fontSize: "14px",
+                lineHeight: "19.6px",
+                fontWeight: 400,
+                maxWidth: "231px",
               }}
             >
               We are a world-class Wedding Planner & Organiser, handling
@@ -157,7 +180,7 @@ const ServicePage: FC = () => {
               style={{
                 maxWidth: "28%",
                 marginRight: "5%",
-                lineHeight: "25.4px",
+                lineHeight: "19.6px",
               }}
             >
               We handle everything from A to Z. From a simple rehearsal dinner

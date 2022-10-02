@@ -13,6 +13,7 @@ interface HomeProps {
   AboutText?: any;
   AboutButton?: any;
   AboutButtonWrapper?: any;
+  PortoContainer?: any;
   PortoWrapper?: any;
   PortoHeading?: any;
   PortoValues?: any;
@@ -30,10 +31,10 @@ interface ContainerProps {
 // HOME PAGE
 S.Container = styled("div")<ContainerProps>(({ props }) => ({
   width: "100%",
-  minHeight: "1000px",
+  minHeight: "880px",
   ...props,
   backgroundRepeat: "no-repeat",
-  backgroundSize: "100vw 1000px",
+  backgroundSize: "cover",
 }));
 
 S.HeadingWrapper = styled("div")({
@@ -77,6 +78,7 @@ S.Button = styled("button")<ButtonProps>(({ ghost = false }) => ({
 
 S.AboutContainer = styled("div")({
   padding: "65px 150px",
+  backgroundColor:'whitesmoke'
 });
 
 S.AboutHeading = styled("h1")({
@@ -118,9 +120,20 @@ S.AboutButton = styled("button")({
 
 // PORTOFOLIO
 
+S.PortoContainer = styled("div")<ContainerProps>(({ props }) => ({
+  width: "100%",
+  minHeight: "720px",
+  ...props,
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  flexDirection: "column",
+}));
+
 S.PortoWrapper = styled("div")({
   textAlign: "center",
-  padding: "40px",
 });
 
 S.PortoHeading = styled("h1")({

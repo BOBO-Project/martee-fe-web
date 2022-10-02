@@ -31,9 +31,10 @@ interface ContainerProps {
 
 S.ContainerBanner = styled("div")({
   position: "relative",
-  // backgroundSize: "100vw 720px",
+  backgroundSize: "cover",
+  backgroundPosition:'center',
   width: "100%",
-  height: "720px",
+  height: "430px",
   objectFit: 'none'
   // backgroundRepeat: "no-repeat",
   // backgroundSize: "100vw 720px",
