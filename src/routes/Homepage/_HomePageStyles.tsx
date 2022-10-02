@@ -31,7 +31,7 @@ interface ContainerProps {
 // HOME PAGE
 S.Container = styled("div")<ContainerProps>(({ props }) => ({
   width: "100%",
-  minHeight: "1000px",
+  minHeight: "880px",
   ...props,
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
@@ -78,6 +78,7 @@ S.Button = styled("button")<ButtonProps>(({ ghost = false }) => ({
 
 S.AboutContainer = styled("div")({
   padding: "65px 150px",
+  backgroundColor:'whitesmoke'
 });
 
 S.AboutHeading = styled("h1")({

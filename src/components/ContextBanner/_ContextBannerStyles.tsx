@@ -31,9 +31,10 @@ interface ContainerProps {
 
 S.ContainerBanner = styled("div")({
   position: "relative",
-  // backgroundSize: "100vw 720px",
+  backgroundSize: "cover",
+  backgroundPosition:'center',
   width: "100%",
-  height: "720px",
+  height: "430px",
   objectFit: 'none'
   // backgroundRepeat: "no-repeat",
   // backgroundSize: "100vw 720px",
@@ -47,7 +48,7 @@ S.HeadingBanner = styled("h1")({
   color: color["primary-white"],
   fontStyle: "normal",
   fontWeight: "700",
-  fontSize: "60px",
+  fontSize: "80px",
   lineHeight: "100%",
   letterSpacing: "-0.015em",
   margin: "auto",

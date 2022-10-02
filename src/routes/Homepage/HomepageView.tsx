@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import AboutUsHome from "./AboustUs";
 import S from "./_HomePageStyles";
 import ContextSection from "components/ContextSection";
@@ -17,13 +17,20 @@ import more6 from "assets/images/more-6.png";
 import more7 from "assets/images/more-7.png";
 import more8 from "assets/images/more-8.png";
 import { color } from "styles/colors";
+import useAxios from "hooks/useAxios";
+import { BANNER_URL, BASE_URL } from "url/api-url";
 
 const HomepageView: FC = () => {
+  const { response, loading, error } = useAxios(BANNER_URL);
+  const banner1 = response?.data[0]?.image_url || home1;
+  const banner2 = response?.data[1]?.image_url || home2;
+  const banner3 = response?.data[2]?.image_url || home2;
+
   return (
     <>
       <S.Container
         style={{
-          backgroundImage: `url('${homeBanner}')`,
+          backgroundImage: `url('${BASE_URL}/${banner1}')`,
         }}
       >
         <S.HeadingWrapper>
@@ -39,7 +46,7 @@ const HomepageView: FC = () => {
       <ContextSection />
       <S.Container
         style={{
-          backgroundImage: `url('${banner2}')`,
+          backgroundImage: `url('${BASE_URL}/${banner2}')`,
         }}
       />
       <div
@@ -153,7 +160,7 @@ const HomepageView: FC = () => {
       </div>
       <S.Container
         style={{
-          backgroundImage: `url('${banner3}')`,
+          backgroundImage: `url('${BASE_URL}/${banner3}')`,
         }}
       />
       <div
@@ -284,7 +291,12 @@ const HomepageView: FC = () => {
             {[1, 1, 1, 1, 1, 1, 1, 1, 1].map((el, idx) => (
               <S.PortoBox>
                 {idx !== 4 ? (
-                  <img src={banner2} alt="a" width="100%" height="100%" />
+                  <img
+                    src={`${BASE_URL}/${banner1}`}
+                    alt="a"
+                    width="100%"
+                    height="100%"
+                  />
                 ) : (
                   <S.PortoValues>
                     <S.PortoHeading>VALUES EVERY MOMENT</S.PortoHeading>
@@ -305,16 +317,18 @@ const HomepageView: FC = () => {
       <AboutUsHome />
       <div
         style={{
+          marginTop:'2%',
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
+          marginBottom:'2%'
         }}
       >
         <p
           style={{
-            fontWeight: 700,
-            fontSize: "28px",
+            fontWeight: 'bold',
+            fontSize: "35px",
             lineHeight: "39.2px",
             color: color["primary-cream2"],
           }}
@@ -325,34 +339,34 @@ const HomepageView: FC = () => {
           style={{
             display: "grid",
             gridTemplateColumns: "auto auto auto auto",
-            gap: "10px",
-            maxWidth: "1000px",
-            maxHeight: "575px",
+            gap: "25px",
+            maxWidth: "100%",
+            maxHeight: "100%",
           }}
         >
           <div>
-            <img width={245} height={245} src={more1} alt="more-1" />
+            <img width={300} height={300} src={more1} alt="more-1" />
           </div>
           <div>
-            <img width={245} height={245} src={more5} alt="more-5" />
+            <img width={300} height={300} src={more5} alt="more-5" />
           </div>
           <div>
-            <img width={245} height={245} src={more2} alt="more-2" />
+            <img width={300} height={300} src={more2} alt="more-2" />
           </div>
           <div>
-            <img width={245} height={245} src={more6} alt="more-6" />
+            <img width={300} height={300} src={more6} alt="more-6" />
           </div>
           <div>
-            <img width={245} height={245} src={more7} alt="more-7" />
+            <img width={300} height={300} src={more7} alt="more-7" />
           </div>
           <div>
-            <img width={245} height={245} src={more3} alt="more-3" />
+            <img width={300} height={300} src={more3} alt="more-3" />
           </div>
           <div>
-            <img width={245} height={245} src={more8} alt="more-8" />
+            <img width={300} height={300} src={more8} alt="more-8" />
           </div>
           <div>
-            <img width={245} height={245} src={more4} alt="more-4" />
+            <img width={300} height={300} src={more4} alt="more-4" />
           </div>
         </div>
       </div>
