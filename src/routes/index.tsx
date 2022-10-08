@@ -10,6 +10,7 @@ import Homepage from "./Homepage";
 import AboutPage from "./AboutPage";
 import ServicePage from "./ServicePage";
 import PortoPage from "./PortoPage";
+import PortoDetail from "./PortoDetailPage";
 import ReviewsPage from "./ReviewsPage";
 import BlogPage from "./BlogPage";
 import ContactUsPage from "./ContactUsPage";
@@ -19,6 +20,7 @@ const appRoutes = [
   { ...AboutPage },
   { ...ServicePage },
   { ...PortoPage },
+  { ...PortoDetail },
   { ...ReviewsPage },
   { ...BlogPage },
   { ...ContactUsPage },

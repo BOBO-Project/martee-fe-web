@@ -18,13 +18,19 @@ import more7 from "assets/images/more-7.png";
 import more8 from "assets/images/more-8.png";
 import { color } from "styles/colors";
 import useAxios from "hooks/useAxios";
-import { BANNER_URL, BASE_URL } from "url/api-url";
+import { BANNER_URL, BASE_URL, PORTO_HOME_URL } from "url/api-url";
 
 const HomepageView: FC = () => {
-  const { response, loading, error } = useAxios(BANNER_URL);
+  const { response, loading, error, fetchData } = useAxios(BANNER_URL);
+  const { response: porto, fetchData: fetchPorto } = useAxios(PORTO_HOME_URL);
   const banner1 = response?.data[0]?.image_url || home1;
   const banner2 = response?.data[1]?.image_url || home2;
   const banner3 = response?.data[2]?.image_url || home2;
+
+  useEffect(() => {
+    fetchData();
+    fetchPorto({ params: { limit: 9 } });
+  }, []);
 
   return (
     <>
@@ -288,46 +294,59 @@ const HomepageView: FC = () => {
               marginTop: "16px",
             }}
           >
-            {[1, 1, 1, 1, 1, 1, 1, 1, 1].map((el, idx) => (
-              <S.PortoBox>
-                {idx !== 4 ? (
-                  <img
-                    src={`${BASE_URL}/${banner1}`}
-                    alt="a"
-                    width="100%"
-                    height="100%"
-                  />
-                ) : (
-                  <S.PortoValues>
-                    <S.PortoHeading>VALUES EVERY MOMENT</S.PortoHeading>
-                    <S.PortoValueText>
-                      From planning leading up to actual wedding day. We take
-                      care of everything, the smallest of details.
-                    </S.PortoValueText>
-                    <S.PortoValueFoot>
-                      Martee wedding planning & organizer
-                    </S.PortoValueFoot>
-                  </S.PortoValues>
-                )}
-              </S.PortoBox>
-            ))}
+            {porto
+              ? porto.data.map((e: any, i: number) => {
+                  if (i === 4) {
+                    return (
+                      <S.PortoValues>
+                        <S.PortoHeading>VALUES EVERY MOMENT</S.PortoHeading>
+                        <S.PortoValueText>
+                          From planning leading up to actual wedding day. We
+                          take care of everything, the smallest of details.
+                        </S.PortoValueText>
+                        <S.PortoValueFoot>
+                          Martee wedding planning & organizer
+                        </S.PortoValueFoot>
+                      </S.PortoValues>
+                    );
+                  }
+                  return (
+                    <>
+                      {e.PortoImages.map((el: any) => {
+                        if (el.is_main) {
+                          return (
+                            <img
+                              key={el.id}
+                              src={`${BASE_URL}/${el.image_url}`}
+                              alt={`${el.id}-${el.image_url}`}
+                              width={288}
+                            />
+                          );
+                        } else {
+                          return <></>;
+                        }
+                      })}
+                    </>
+                  );
+                })
+              : null}
           </div>
         </S.PortoWrapper>
       </S.PortoContainer>
       <AboutUsHome />
       <div
         style={{
-          marginTop:'2%',
+          marginTop: "2%",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
-          marginBottom:'2%'
+          marginBottom: "2%",
         }}
       >
         <p
           style={{
-            fontWeight: 'bold',
+            fontWeight: "bold",
             fontSize: "35px",
             lineHeight: "39.2px",
             color: color["primary-cream2"],
@@ -340,8 +359,6 @@ const HomepageView: FC = () => {
             display: "grid",
             gridTemplateColumns: "auto auto auto auto",
             gap: "25px",
-            maxWidth: "100%",
-            maxHeight: "100%",
           }}
         >
           <div>
