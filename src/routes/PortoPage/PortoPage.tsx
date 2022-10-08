@@ -27,7 +27,7 @@ const PortoPage: FC = () => {
 
   useEffect(() => {
     const arr = [];
-    for (let i = 1; i < response?.totalPages; i++) {
+    for (let i = 1; i <= response?.totalPages; i++) {
       arr.push(i);
     }
     setTotalPages(arr);
