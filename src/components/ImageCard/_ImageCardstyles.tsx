@@ -16,8 +16,5 @@ S.Wrapper = styled("div")({
     justifyContent:'space-between'
   });
 
-S.Image = styled("img")({
-
-})
 
 export default S

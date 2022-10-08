@@ -9,11 +9,9 @@ interface Props{
 
 const ImageCard: FC<Props> = (props: Props) =>{
     return(
-        <>
             <S.Wrapper>
                 {props.children}
             </S.Wrapper>
-        </>
     )
 }
 
