@@ -15,7 +15,7 @@ const PortoPage: FC = () => {
   const [category, setCategory] = useState("");
   const [page, setPage] = useState(1);
   const [totalpages, setTotalPages] = useState<number[]>([]);
-  const { response, loading, error, fetchData } = useAxios(PORTO_HOME_URL);
+  const { response, fetchData } = useAxios(PORTO_HOME_URL);
 
   const dataPorto = response?.data || null;
 
@@ -32,6 +32,11 @@ const PortoPage: FC = () => {
     }
     setTotalPages(arr);
   }, [response]);
+
+  const handleChangeCategory = (value: string) => {
+    setCategory(value);
+    setPage(1);
+  };
 
   return (
     <div
@@ -53,7 +58,7 @@ const PortoPage: FC = () => {
       >
         <div style={{ color: color["primary-cream2"] }}>
           <S.Button
-            onClick={() => setCategory("")}
+            onClick={() => handleChangeCategory("")}
             category={category === "" ? true : false}
           >
             Semua Kategori
@@ -62,7 +67,7 @@ const PortoPage: FC = () => {
         </div>
         <div style={{ color: color["primary-cream2"] }}>
           <S.Button
-            onClick={() => setCategory("traditional-wedding")}
+            onClick={() => handleChangeCategory("traditional-wedding")}
             category={category === "traditional-wedding" ? true : false}
           >
             Traditional Wedding
@@ -71,7 +76,7 @@ const PortoPage: FC = () => {
         </div>
         <div style={{ color: color["primary-cream2"] }}>
           <S.Button
-            onClick={() => setCategory("international-wedding")}
+            onClick={() => handleChangeCategory("international-wedding")}
             category={category === "international-wedding" ? true : false}
           >
             International Wedding
